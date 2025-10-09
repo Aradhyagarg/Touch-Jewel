@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import LoginPage from './Pages/LoginPage';
+import SignupPage from './Pages/SignupPage';
 
-function App() {
+
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('login');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-white">
+      <Header mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
+      {currentPage === 'login' ? (
+        <LoginPage setCurrentPage={setCurrentPage} />
+      ) : (
+        <SignupPage setCurrentPage={setCurrentPage} />
+      )}
+      <Footer />
     </div>
   );
-}
-
+};
 export default App;
