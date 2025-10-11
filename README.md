@@ -235,9 +235,9 @@ Success toast notification
 
 Form clears after submission
 
-Enter invalid email → error toast
+Enter invalid email = error toast
 
-Empty email → error toast
+Empty email = error toast
 
 Responsive Design
 
