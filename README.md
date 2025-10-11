@@ -1,70 +1,388 @@
-# Getting Started with Create React App
+User Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Login Page
 
-## Available Scripts
+Navigate to login (click User icon or "Click Here" from signup)
 
-In the project directory, you can run:
+Email validation (try invalid emails like "test" or "test@")
 
-### `npm start`
+Password validation (less than 6 characters)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Empty field validation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Show/Hide password toggle
 
-### `npm test`
+Remember me checkbox
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Successful login (use any email/password that passes validation)
 
-### `npm run build`
+Toast notification on successful login
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User session persists after refresh
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Signup Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All form field validations (first name, last name, email, phone, password)
 
-### `npm run eject`
+Password match validation (confirm password)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Password length requirement (8+ characters)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Phone number validation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Country code selector
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Account creation and automatic login
 
-## Learn More
+Navigate to login page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Logout
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Click User icon when logged in to logout
 
-### Code Splitting
+Toast notification on logout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Session cleared from localStorage
 
-### Analyzing the Bundle Size
+Shopping Cart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Adding Items
 
-### Making a Progressive Web App
+Click "Add to Cart" on any product card
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Toast notification appears
 
-### Advanced Configuration
+Cart badge updates with item count
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Adding same item increases quantity
 
-### Deployment
+Cart Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+View all cart items
 
-### `npm run build` fails to minify
+Increase quantity (+)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Decrease quantity (-)
+
+Remove item from cart
+
+Real-time total calculation
+
+Empty cart state (when no items)
+
+Prices update based on selected currency
+
+Persistence
+
+Cart persists after page refresh
+
+Works for both logged-in and guest users
+
+Check localStorage
+
+Wishlist
+
+Adding/Removing
+
+Click heart icon on any product card
+
+Heart fills red when item is in wishlist
+
+Toast notification on add/remove
+
+Wishlist badge updates with count
+
+Wishlist Page
+
+View all wishlist items
+
+Add to cart from wishlist
+
+Remove from wishlist (click heart again)
+
+Empty wishlist state
+
+Item count display
+
+Persistence
+
+Wishlist persists after refresh
+
+Works for guests (localStorage)
+
+Works for logged-in users
+
+Search Functionality
+
+Search Bar
+
+Type in search bar (desktop)
+
+Press Enter or click search icon
+
+Mobile search (hamburger menu)
+
+Navigate to search results page
+
+Search Results
+
+Search by product name (e.g., "ring", "earrings")
+
+Search by category (e.g., "necklaces", "bracelets")
+
+Search by shape (e.g., "round", "emerald")
+
+Results count display
+
+No results state (try "xyz" or "test")
+
+Add to cart from search results
+
+Add to wishlist from search results
+
+Test Queries
+Try searching for:
+
+ring
+
+diamond
+
+earrings
+
+necklace
+
+emerald
+
+bracelet
+
+stud
+
+xyz (no results)
+
+Currency Conversion
+
+Currency Selector
+
+Click currency symbol in header
+
+Dropdown shows all currencies
+
+Select different currency (USD, EUR, GBP, AED, INR)
+
+All prices update instantly
+
+Real-time Updates
+
+Homepage product prices
+
+Cart page prices
+
+Wishlist page prices
+
+Search results prices
+
+Cart total updates
+
+Persistence
+
+Selected currency persists after refresh
+
+Check localStorage for saved currency
+
+Test Different Currencies
+
+INR ₹ (base currency)
+
+USD $ (×0.012)
+
+EUR € (×0.011)
+
+GBP £ (×0.0095)
+
+Toast Notifications
+
+Test all toast messages:
+
+Login successful (green)
+
+Logout successful (blue)
+
+Added to cart (green)
+
+Cart updated (green)
+
+Removed from cart (blue)
+
+Added to wishlist (green)
+
+Removed from wishlist (blue)
+
+Newsletter subscription success (green)
+
+Invalid email error (red)
+
+Auto-dismiss after 3 seconds
+
+Newsletter Subscription
+
+Footer Newsletter Form
+
+Enter valid email
+
+Click arrow button
+
+Success toast notification
+
+Form clears after submission
+
+Enter invalid email → error toast
+
+Empty email → error toast
+
+Responsive Design
+
+Mobile (< 768px)
+
+Hamburger menu appears
+
+Mobile search bar shows when menu open
+
+Search functionality works
+
+All pages are mobile-friendly
+
+Cart/wishlist layouts adapt
+
+Product grid becomes 1 column
+
+Tablet (768px - 1024px)
+
+2 column product grid
+
+Header adjusts appropriately
+
+All features work smoothly
+
+Desktop (> 1024px)
+
+Full navigation visible
+
+Search bar in header
+
+3-4 column product grids
+
+Optimal spacing and layout
+
+Test Responsiveness
+
+Chrome DevTools (F12)
+
+Try different devices:
+
+iPhone SE (375px)
+
+iPad (768px)
+
+Desktop (1920px)
+
+Navigation
+
+Page Navigation
+
+Click "NIORA" logo = Homepage
+
+Click User icon = Login (when logged out)
+
+Click User icon = Logout (when logged in)
+
+Click Cart icon = Cart page
+
+Click Heart icon = Wishlist page
+
+"SHOP NOW" button = Signup page
+
+"Register Here" = Signup page
+
+"Click Here" = Login page
+
+Browser Navigation
+
+All pages work with browser back button
+
+Page refresh maintains state
+
+LocalStorage Persistence
+
+localStorage.getItem('cart')        // Cart items
+localStorage.getItem('wishlist')    // Wishlist items
+localStorage.getItem('user')        // User session
+localStorage.getItem('currency')    // Selected currency
+
+
+Test Persistence
+
+Add items to cart
+
+Add items to wishlist
+
+Change currency
+
+Login
+
+Refresh page (F5)
+
+All data should persist
+
+Product Interactions
+
+Product Cards
+
+Hover effect (image zoom)
+
+Heart icon click (add to wishlist)
+
+Heart icon shows filled when in wishlist
+
+"Add to Cart" button
+
+Price displays in selected currency
+
+5-star rating display
+
+Multiple Products
+
+Add multiple different products
+
+Add same product multiple times
+
+Mix cart and wishlist items
+
+Edge Cases & Error Handling
+
+Test Edge Cases
+
+Empty cart page
+
+Empty wishlist page
+
+Search with no results
+
+Remove all items from cart
+
+Decrease quantity to 0 (removes item)
+
+Login with invalid credentials
+
+Form submission with missing fields
+
+Newsletter with invalid email
+
+Form Validations
+
+Special characters in email
+
+Very long inputs
+
+Password mismatch
+
+Phone number formats
