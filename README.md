@@ -1,12 +1,12 @@
-User Authentication
+1 USER AUTHENTICATION
 Login Page
-Navigate to login (click User icon or "Click Here" from signup)
-Email validation (try invalid emails like "test" or "test@")
+Navigate to login (click User icon or Click Here from signup)
+Email validation (try invalid emails like test or test@)
 Password validation (less than 6 characters)
 Empty field validation
-Show/Hide password toggle
+Show or Hide password toggle
 Remember me checkbox
-Successful login (use any email/password that passes validation)
+Successful login (use any email or password that passes validation)
 Toast notification on successful login
 User session persists after refresh
 
@@ -18,81 +18,74 @@ Phone number validation
 Country code selector
 Account creation and automatic login
 Navigate to login page
+
 Logout
 Click User icon when logged in to logout
 Toast notification on logout
-
 Session cleared from localStorage
-Shopping Cart
+
+2 SHOPPING CART
 Adding Items
-Click "Add to Cart" on any product card
+Click Add to Cart on any product card
 Toast notification appears
 Cart badge updates with item count
 Adding same item increases quantity
+
 Cart Page
 View all cart items
-Increase quantity (+)
-Decrease quantity (-)
+Increase quantity
+Decrease quantity
 Remove item from cart
 Real-time total calculation
-Empty cart state (when no items)
+Empty cart state when no items
 Prices update based on selected currency
 
 Persistence
 Cart persists after page refresh
 Works for both logged-in and guest users
-Check localStorage
+Check localStorage for saved data
 
-Wishlist
-Adding/Removing
+3 WISHLIST
+Adding or Removing
 Click heart icon on any product card
 Heart fills red when item is in wishlist
-Toast notification on add/remove
+Toast notification on add or remove
 Wishlist badge updates with count
+
 Wishlist Page
 View all wishlist items
 Add to cart from wishlist
-Remove from wishlist (click heart again)
+Remove from wishlist
 Empty wishlist state
 Item count display
 
 Persistence
 Wishlist persists after refresh
-Works for guests (localStorage)
-Works for logged-in users
+Works for guests and logged-in users
 
-Search Functionality
+4 SEARCH FUNCTIONALITY
 Search Bar
-Type in search bar (desktop)
+Type in search bar
 Press Enter or click search icon
-Mobile search (hamburger menu)
+Mobile search via hamburger menu
 Navigate to search results page
-Search Results
-Search by product name (e.g., "ring", "earrings")
-Search by category (e.g., "necklaces", "bracelets")
-Search by shape (e.g., "round", "emerald")
 
+Search Results
+Search by product name
+Search by category
+Search by shape
 Results count display
-No results state (try "xyz" or "test")
+No results state
 Add to cart from search results
 Add to wishlist from search results
 
-Test Queries
-Try searching for:
-ring
-diamond
-earrings
-necklace
-emerald
-bracelet
-xyz (no results)
-Currency Conversion
+5 CURRENCY CONVERSION
 Currency Selector
 Click currency symbol in header
 Dropdown shows all currencies
-Select different currency (USD, EUR, GBP, AED, INR)
-
+Select different currency
 All prices update instantly
+
 Real-time Updates
 Homepage product prices
 Cart page prices
@@ -104,114 +97,72 @@ Persistence
 Selected currency persists after refresh
 Check localStorage for saved currency
 
-Test Different Currencies
-INR ₹ (base currency)
-USD $ (×0.012)
-EUR € (×0.011)
-GBP £ (×0.0095)
-
-Toast Notifications
-Test all toast messages:
-Login successful (green)
-Logout successful (blue)
-Added to cart (green)
-Cart updated (green)
-Removed from cart (blue)
-Added to wishlist (green)
-Removed from wishlist (blue)
-Newsletter subscription success (green)
-Invalid email error (red)
+6 TOAST NOTIFICATIONS
+Login successful
+Logout successful
+Added to cart
+Cart updated
+Removed from cart
+Added to wishlist
+Removed from wishlist
+Newsletter subscription success
+Invalid email error
 Auto-dismiss after 3 seconds
-Newsletter Subscription
-Footer Newsletter Form
+
+7 NEWSLETTER SUBSCRIPTION
 Enter valid email
 Click arrow button
 Success toast notification
 Form clears after submission
-Enter invalid email = error toast
-Empty email = error toast
+Enter invalid email shows error
+Empty email shows error
 
-Responsive Design
-Mobile (< 768px)
+8 RESPONSIVE DESIGN
+Mobile
 Hamburger menu appears
 Mobile search bar shows when menu open
 Search functionality works
 All pages are mobile-friendly
-Cart/wishlist layouts adapt
-Product grid becomes 1 column
-Tablet (768px - 1024px)
-2 column product grid
+Cart and wishlist layouts adapt
+Product grid becomes one column
+
+Tablet
+Two column product grid
 Header adjusts appropriately
 All features work smoothly
-Desktop (> 1024px)
+
+Desktop
 Full navigation visible
 Search bar in header
-3-4 column product grids
+Three to four column product grids
 Optimal spacing and layout
-Test Responsiveness
-Chrome DevTools (F12)
 
-Try different devices:
-iPhone SE (375px)
-iPad (768px)
-Desktop (1920px)
+9 NAVIGATION
+Click logo goes to Homepage
+Click User icon goes to Login or Logout
+Click Cart icon goes to Cart page
+Click Heart icon goes to Wishlist page
+Register or Login links work correctly
+Browser back button and refresh maintain state
 
-Navigation
-Page Navigation
-Click "NIORA" logo = Homepage
-Click User icon = Login (when logged out)
-Click User icon = Logout (when logged in)
-Click Cart icon = Cart page
-Click Heart icon = Wishlist page
-"SHOP NOW" button = Signup page
-"Register Here" = Signup page
-"Click Here" = Login page
-Browser Navigation
-All pages work with browser back button
-Page refresh maintains state
-LocalStorage Persistence
+10 LOCALSTORAGE PERSISTENCE
+Cart items stored in localStorage
+Wishlist items stored in localStorage
+User session stored in localStorage
+Selected currency stored in localStorage
+All data persists after refresh
 
-localStorage.getItem('cart')        // Cart items
-localStorage.getItem('wishlist')    // Wishlist items
-localStorage.getItem('user')        // User session
-localStorage.getItem('currency')    // Selected currency
-
-
-Test Persistence
-Add items to cart
-Add items to wishlist
-Change currency
-Login
-Refresh page (F5)
-
-All data should persist
-Product Interactions
-Product Cards
-Hover effect (image zoom)
-Heart icon click (add to wishlist)
-Heart icon shows filled when in wishlist
-"Add to Cart" button
+11 PRODUCT INTERACTIONS
+Hover effect for image zoom
+Add to wishlist or cart works
 Price displays in selected currency
-5-star rating display
-Multiple Products
-Add multiple different products
-Add same product multiple times
-Mix cart and wishlist items
+Five-star rating display
 
-Edge Cases & Error Handling
-Test Edge Cases
-Empty cart page
-Empty wishlist page
+12 EDGE CASES AND ERROR HANDLING
+Empty cart or wishlist
 Search with no results
-Remove all items from cart
-Decrease quantity to 0 (removes item)
-Login with invalid credentials
-Form submission with missing fields
-Newsletter with invalid email
-Form Validations
-Special characters in email
-Very long inputs
-
+Remove all items
+Invalid login credentials
+Invalid form submissions
 Password mismatch
-
-Phone number formats
+Invalid phone or email format
